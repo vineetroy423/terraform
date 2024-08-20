@@ -4,7 +4,7 @@ output "publicip" {
 }
 output "privateip" {
   value = aws_instance.dev.private_ip
-  description = "printing private ip"
+  description = "pmkrinting private ip"
   sensitive = true
 
 }
