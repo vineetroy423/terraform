@@ -4,7 +4,7 @@ resource "aws_instance" "my_instance" {
   key_name          = "my-pub-server-key"
   availability_zone = "ap-south-1b"
   tags = {
-    Name = "dev-backend"
+    Name = "dev-backend-dev12"
   }
   #lifecycle{
   # prevent_destroy= false
