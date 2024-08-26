@@ -1,7 +1,9 @@
 terraform {
   backend "s3" {
-    bucket = "terraform-20240823154650679200000001"
-    key    = "dev/terraform.tfstate"
-    region = "ap-south-1"
+    bucket         = "aws-devops-vinnyy"
+    key            = "dev/terraform.tfstate"
+    region         = "ap-south-1"
+    dynamodb_table = "terraform-state-lock-dynamo" # DynamoDB table used for state locking, note: first run day-4-bckend resources then day-5-backend config
+    encrypt        = true                          # Ensures the state is encrypted at rest in S3.
   }
 }
